@@ -1,11 +1,14 @@
 import React from 'react'
+import Main from './components/Main/Main'
+import Sidebar from './components/Sidebar/Sidebar'
 
 class App extends React.Component {
   render () {
     return (
-      <main id='App'>
-        <p>Working</p>
-      </main>
+      <div id='App' className='flex h-screen'>
+        <Main />
+        <Sidebar />
+      </div>
     )
   }
 }
