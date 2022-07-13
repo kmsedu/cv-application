@@ -1,6 +1,6 @@
 import React from 'react'
 import Top from './Top'
-import Bottom from './Bottom'
+import Bottom from './Bottom/Bottom'
 
 class Main extends React.Component {
   constructor(props) {
