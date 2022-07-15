@@ -19,41 +19,46 @@ class Top extends React.Component {
     this.setState({ [name]: value })
   }
 
-  componentDidUpdate () {
-    console.log(this.state)
-  }
-
   render () {
+    const { editMode } = this.props
     return (
       <section className='flex flex-1 flex-col items-end bg-neutral-300 items-end justify-center'>
         <div
-          className='mr-24 self-end flex flex-col'
+          className='mr-12 self-end flex flex-col gap-2'
         >
-          <input
-            type='text'
-            placeholder='John'
-            name='firstName'
-            className='text-3xl text-right bg-transparent'
-            onChange={this.handleChange}
-            value={this.state.firstName}
-          />
-          <input
-            type='text'
-            placeholder='Doe'
-            name='lastName'
-            className='text-xl text-right bg-transparent'
-            onChange={this.handleChange}
-            value={this.state.lastName}
-          />
+          {editMode
+            ? <input
+                type='text'
+                placeholder='John'
+                name='firstName'
+                className='py-1 pr-2 text-3xl text-right bg-transparent border border-neutral-400 rounded'
+                onChange={this.handleChange}
+                value={this.state.firstName}
+              />
+            : <h2 className='py-1 pr-2 text-3xl text-right border border-transparent'>{this.state.firstName}</h2>}
+
+          {editMode
+            ? <input
+                type='text'
+                placeholder='Doe'
+                name='lastName'
+                className='py-1 pr-2 text-xl text-right bg-transparent border border-neutral-400 rounded'
+                onChange={this.handleChange}
+                value={this.state.lastName}
+              />
+            : <h3 className='py-1 pr-2 text-xl text-right border border-transparent'>{this.state.lastName}</h3>}
         </div>
-        <input
-          type='text'
-          placeholder='Software Developer'
-          name='title'
-          className='mr-24 mt-3 text-right bg-transparent'
-          onChange={this.handleChange}
-          value={this.state.title}
-        />
+
+        {editMode
+          ? <input
+              type='text'
+              placeholder='Software Developer'
+              name='title'
+              className='py-1 pr-2 mr-12 mt-3 text-right bg-transparent border border-neutral-400 rounded'
+              onChange={this.handleChange}
+              value={this.state.title}
+            />
+          : <h3 className='py-1 pr-2 mr-12 mt-3 text-right border border-transparent'>{this.state.title}</h3>}
       </section>
     )
   }

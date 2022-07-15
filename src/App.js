@@ -7,7 +7,7 @@ class App extends React.Component {
     super()
 
     this.state = {
-      editMode: false
+      editMode: true
     }
 
     this.handleToggleEditMode = this.handleToggleEditMode.bind(this)
@@ -26,7 +26,7 @@ class App extends React.Component {
           type='button'
           className='fixed bottom-3 text-white rounded left-1/2 bg-neutral-500 hover:bg-neutral-600 py-2 px-4'
           onClick={this.handleToggleEditMode}
-        >Edit
+        >{this.state.editMode ? 'Done' : 'Edit'}
         </button>
       </div>
     )

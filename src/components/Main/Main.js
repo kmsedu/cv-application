@@ -3,14 +3,11 @@ import Top from './Top'
 import Bottom from './Bottom/Bottom'
 
 class Main extends React.Component {
-  constructor (props) {
-    super(props)
-  }
-
   render () {
+    const { editMode } = this.props
     return (
       <main className='main flex-[3_0_0%] bg-neutral-200 flex flex-col'>
-        <Top />
+        <Top editMode={editMode} />
         <Bottom />
       </main>
     )
