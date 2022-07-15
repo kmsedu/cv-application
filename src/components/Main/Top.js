@@ -1,14 +1,59 @@
 import React from 'react'
 
 class Top extends React.Component {
-  render() {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      firstName: '',
+      lastName: '',
+      title: ''
+    }
+
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange (event) {
+    const { name, value } = event.target
+
+    this.setState({ [name]: value })
+  }
+
+  componentDidUpdate () {
+    console.log(this.state)
+  }
+
+  render () {
     return (
-      <section className='main--top flex flex-1 flex-col items-end bg-neutral-300 justify-center'>
-        <div className='main--top-name pr-24'>
-          <h1 className='main--top-first-name text-3xl'>John</h1>
-          <h2 className='main--top-second-name text-xl text-right'>Doe</h2>
+      <section className='flex flex-1 flex-col items-end bg-neutral-300 items-end justify-center'>
+        <div
+          className='mr-24 self-end flex flex-col'
+        >
+          <input
+            type='text'
+            placeholder='John'
+            name='firstName'
+            className='text-3xl text-right bg-transparent'
+            onChange={this.handleChange}
+            value={this.state.firstName}
+          />
+          <input
+            type='text'
+            placeholder='Doe'
+            name='lastName'
+            className='text-xl text-right bg-transparent'
+            onChange={this.handleChange}
+            value={this.state.lastName}
+          />
         </div>
-      <h2 className='main--top-job-title pr-24 mt-3'>Software Developer</h2>
+        <input
+          type='text'
+          placeholder='Software Developer'
+          name='title'
+          className='mr-24 mt-3 text-right bg-transparent'
+          onChange={this.handleChange}
+          value={this.state.title}
+        />
       </section>
     )
   }

@@ -2,11 +2,11 @@ import React from 'react'
 import profilePic from '../../images/elmer.png'
 
 class Picture extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
   }
 
-  render() {
+  render () {
     return (
       <>
         <img src={profilePic} alt='Profile Picture' className='rounded-full w-36 h-36 m-10' />

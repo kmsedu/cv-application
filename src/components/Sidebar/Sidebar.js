@@ -4,11 +4,11 @@ import ContactInfo from './ContactInfo'
 import Address from './Address'
 
 class Sidebar extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
   }
 
-  render() {
+  render () {
     return (
       <section className='sidebar flex flex-col flex-1 p-3 items-center justify-between'>
         <Picture />

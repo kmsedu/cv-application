@@ -3,11 +3,11 @@ import Top from './Top'
 import Bottom from './Bottom/Bottom'
 
 class Main extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
   }
 
-  render() {
+  render () {
     return (
       <main className='main flex-[3_0_0%] bg-neutral-200 flex flex-col'>
         <Top />

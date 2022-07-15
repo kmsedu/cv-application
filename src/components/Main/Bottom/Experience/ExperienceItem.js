@@ -1,14 +1,14 @@
 import React from 'react'
 
 class Experience extends React.Component {
-  render() {
+  render () {
     return (
       <div className='flex justify-between items-center max-w-[70%] text-xs my-8'>
-        <div> 
+        <div>
           <p>Software Developer</p>
           <p>2022 - 2022</p>
         </div>
-        <div className='h-0.5 w-[30%] bg-neutral-300'></div>
+        <div className='h-0.5 w-[30%] bg-neutral-300' />
         <div>
           <p>Responsibilities</p>
         </div>

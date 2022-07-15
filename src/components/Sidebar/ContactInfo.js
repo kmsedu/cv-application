@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 class ContactInfo extends React.Component {
-  render() {
+  render () {
     return (
       <div className='flex gap-2 my-8'>
         <FontAwesomeIcon icon={faPhone} />
