@@ -1,13 +1,15 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 class ExperienceItem extends React.Component {
   constructor () {
     super()
 
     this.state = {
-      title: '',
-      dates: '',
-      responsibilities: ''
+      title: 'Job Title',
+      dates: '2022 - 2022',
+      responsibilities: 'Enter your responsibilities / Experience'
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -60,15 +62,13 @@ class ExperienceItem extends React.Component {
               />
             : <p className='p-2'>{this.state.responsibilities}</p>}
         </div>
-        <button
-          type='button'
-          onClick={() => {
-            console.log(id)
-            onDeleteExperienceItem(id)
-          }}
-        >
-          -
-        </button>
+        {editMode &&
+          <button
+            type='button'
+            onClick={() => onDeleteExperienceItem(id)}
+          >
+            <FontAwesomeIcon icon={faTrash} className='text-red-800' />
+          </button>}
       </div>
     )
   }
