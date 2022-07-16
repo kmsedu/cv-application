@@ -6,5 +6,7 @@ import './index.css'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
-  <App />
+  <div className='flex justify-center'>
+    <App />
+  </div>
 )

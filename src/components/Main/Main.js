@@ -8,7 +8,7 @@ class Main extends React.Component {
     return (
       <main className='main flex-[3_0_0%] bg-neutral-200 flex flex-col'>
         <Top editMode={editMode} />
-        <Bottom />
+        <Bottom editMode={editMode} />
       </main>
     )
   }

@@ -19,7 +19,7 @@ class App extends React.Component {
 
   render () {
     return (
-      <div id='App' className='flex h-screen'>
+      <div id='App' className='flex h-screen w-[800px] border border-black justify-center'>
         <Main editMode={this.state.editMode} />
         <Sidebar editMode={this.state.editMode} />
         <button
