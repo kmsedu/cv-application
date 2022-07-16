@@ -11,10 +11,6 @@ class About extends React.Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
-  componentDidUpdate () {
-    console.log(this.state)
-  }
-
   handleChange (event) {
     const { name, value } = event.target
 
