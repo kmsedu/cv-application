@@ -24,7 +24,7 @@ class App extends React.Component {
         <Sidebar editMode={this.state.editMode} />
         <button
           type='button'
-          className='fixed bottom-3 text-white font-bold rounded left-1/2 bg-orange-500 hover:bg-orange-600 py-2 px-4'
+          className='fixed bottom-3 text-white font-bold rounded left-1/2 bg-orange-500 hover:bg-orange-600 py-2 px-4 print:hidden'
           onClick={this.handleToggleEditMode}
         >
           {this.state.editMode ? 'Done' : 'Edit'}
