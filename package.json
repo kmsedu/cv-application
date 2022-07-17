@@ -1,6 +1,7 @@
 {
   "name": "cv-application",
   "version": "0.1.0",
+  "homepage": "https://kmsedu.github.io/cv-application",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -15,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +43,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "autoprefixer": "^10.4.7",
+    "gh-pages": "^4.0.0",
     "nanoid": "^4.0.0",
     "postcss": "^8.4.14",
     "standard": "^17.0.0",
