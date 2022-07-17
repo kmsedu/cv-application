@@ -30,7 +30,7 @@ class Picture extends React.Component {
             placeholder='Link to image'
             onChange={this.handleChange}
             value={this.state.imageUrl}
-            className='p-2 mt-2 max-w-[80%] mx-auto'
+            className='p-2 mt-2 max-w-[80%] mx-auto bg-transparent border border-white rounded focus:outline-none'
           />}
         <img
           src={this.state.imageUrl !== '' ? this.state.imageUrl : profilePic}

@@ -8,9 +8,9 @@ class Sidebar extends React.Component {
     const { editMode } = this.props
 
     return (
-      <section className='sidebar flex flex-col flex-none justify-between'>
+      <section className='sidebar flex flex-col flex-none justify-between bg-gradient-to-b from-blue-900 to-blue-800 text-white'>
         <Picture editMode={editMode} />
-        <h2 className='text-xl text-center'>Contact</h2>
+        <h2 className='text-xl font-extrabold text-center'>Contact</h2>
         <section className='flex-1 justify-self-start'>
           <ContactInfo contactType='phone' editMode={editMode} />
           <ContactInfo contactType='email' editMode={editMode} />

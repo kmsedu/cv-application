@@ -34,16 +34,16 @@ class ExperienceItem extends React.Component {
         <div className='flex flex-col gap-1'>
           {editMode
             ? <input
-                className='text-right p-1'
+                className='text-right p-1 border border-neutral-200'
                 type='text'
                 name='title'
                 onChange={this.handleChange}
                 value={this.state.title}
               />
-            : <p className='text-nowrap text-right p-1'>{this.state.title}</p>}
+            : <p className='text-nowrap text-right p-1 font-bold text-sm'>{this.state.title}</p>}
           {editMode
             ? <input
-                className='text-right p-1'
+                className='text-right p-1 border border-neutral-200'
                 type='text'
                 name='dates'
                 onChange={this.handleChange}
@@ -55,7 +55,7 @@ class ExperienceItem extends React.Component {
         <div className='flex'>
           {editMode
             ? <textarea
-                className='resize-none p-2 h-14 w-56'
+                className='resize-none p-2 h-14 w-56 border border-neutral-200'
                 onChange={this.handleChange}
                 name='responsibilities'
                 value={this.state.responsibilities}

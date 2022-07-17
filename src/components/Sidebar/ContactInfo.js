@@ -37,9 +37,9 @@ class ContactInfo extends React.Component {
               onChange={this.handleChange}
               value={this.state.contactText}
               name='contactText'
-              className='mt-1 p-2'
+              className='mt-1 p-2 bg-transparent border border-white rounded focus:outline-none'
             />
-          : <p className='mt-1'>{this.state.contactText}</p>}
+          : <p className='mt-1 font-bold'>{this.state.contactText}</p>}
       </div>
     )
   }

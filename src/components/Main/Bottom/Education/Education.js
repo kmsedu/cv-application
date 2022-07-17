@@ -48,12 +48,12 @@ class Education extends React.Component {
     })
     return (
       <div>
-        <h3 className='text-xl mt-4'>Education</h3>
+        <h3 className='text-xl mt-4 font-extrabold text-slate-500'>Education</h3>
         {educationItemElements}
         {editMode &&
         this.state.educationItemsCount < 3 &&
           <button
-            className='mx-auto w-full text-3xl'
+            className='mx-auto w-full text-3xl bg-blue-900 text-white hover:bg-blue-800 rounded'
             type='button'
             onClick={this.handleAddEducationItem}
           >

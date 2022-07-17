@@ -6,7 +6,7 @@ class Main extends React.Component {
   render () {
     const { editMode } = this.props
     return (
-      <main className='main flex-[3_0_0%] bg-neutral-200 flex flex-col'>
+      <main className='main flex-[3_0_0%] flex flex-col'>
         <Top editMode={editMode} />
         <Bottom editMode={editMode} />
       </main>

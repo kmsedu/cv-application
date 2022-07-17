@@ -21,10 +21,10 @@ class About extends React.Component {
     const { editMode } = this.props
     return (
       <div className='min-h-[135px]'>
-        <h3 className='text-xl mt-4'>About</h3>
+        <h3 className='text-xl mt-4 font-extrabold text-slate-500'>About</h3>
         {editMode
           ? <textarea
-              className='mt-4 max-w-[90%] text-xs resize-none w-[90%] h-20 p-2 m-0 rounded'
+              className='mt-4 max-w-[90%] text-xs resize-none w-[90%] h-20 p-2 m-0 rounded border border-neutral-200'
               name='about'
               onChange={this.handleChange}
               placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tellus lorem, fermentum id risus feugiat, molestie rutrum odio. Pellentesque elementum velit erat, et mattis diam rhoncus et.'

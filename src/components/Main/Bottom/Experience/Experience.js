@@ -52,12 +52,12 @@ class Experience extends React.Component {
     })
     return (
       <div className='flex flex-col'>
-        <h3 className='text-xl mt-4'>Experience</h3>
+        <h3 className='text-xl mt-4 font-extrabold text-slate-500'>Experience</h3>
         {experienceItemElements}
         {editMode &&
         this.state.experienceItemsCount < 3 &&
           <button
-            className='mx-auto w-full text-3xl'
+            className='mx-auto w-full text-3xl bg-blue-900 text-white rounded hover:bg-blue-800'
             type='button'
             onClick={this.handleAddExperienceItem}
           >
