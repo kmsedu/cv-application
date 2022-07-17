@@ -2,14 +2,45 @@ import React from 'react'
 import profilePic from '../../images/elmer.png'
 
 class Picture extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor () {
+    super()
+
+    this.state = {
+      imageUrl: ''
+    }
+
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange (event) {
+    const { name, value } = event.target
+
+    this.setState({ [name]: value })
+  }
+
+  componentDidUpdate () {
+    console.log(this.state)
   }
 
   render () {
+    const { editMode } = this.props
+
     return (
       <>
-        <img src={profilePic} alt='Profile Picture' className='rounded-full w-36 h-36 m-10' />
+        {editMode &&
+          <input
+            type='text'
+            name='imageUrl'
+            placeholder='Link to image'
+            onChange={this.handleChange}
+            value={this.state.imageUrl}
+            className='p-2'
+          />}
+        <img
+          src={this.state.imageUrl !== '' ? this.state.imageUrl : profilePic}
+          alt='Profile Picture'
+          className='rounded-full w-36 h-36 m-10 object-cover'
+        />
       </>
     )
   }
