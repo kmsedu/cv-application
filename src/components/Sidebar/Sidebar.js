@@ -16,7 +16,7 @@ class Sidebar extends React.Component {
           <ContactInfo contactType='email' editMode={editMode} />
           <ContactInfo contactType='website' editMode={editMode} />
         </section>
-        <Address />
+        <Address editMode={editMode} />
       </section>
     )
   }

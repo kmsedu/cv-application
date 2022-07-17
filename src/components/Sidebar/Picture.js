@@ -18,10 +18,6 @@ class Picture extends React.Component {
     this.setState({ [name]: value })
   }
 
-  componentDidUpdate () {
-    console.log(this.state)
-  }
-
   render () {
     const { editMode } = this.props
 
@@ -34,7 +30,7 @@ class Picture extends React.Component {
             placeholder='Link to image'
             onChange={this.handleChange}
             value={this.state.imageUrl}
-            className='p-2 mt-2 max-w-[80%]'
+            className='p-2 mt-2 max-w-[80%] mx-auto'
           />}
         <img
           src={this.state.imageUrl !== '' ? this.state.imageUrl : profilePic}
