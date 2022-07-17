@@ -52,7 +52,13 @@ class Education extends React.Component {
         {educationItemElements}
         {editMode &&
         this.state.educationItemsCount < 3 &&
-          <button type='button' onClick={this.handleAddEducationItem}>+</button>}
+          <button
+            className='mx-auto w-full text-3xl'
+            type='button'
+            onClick={this.handleAddEducationItem}
+          >
+            +
+          </button>}
       </div>
     )
   }

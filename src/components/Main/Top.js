@@ -22,7 +22,7 @@ class Top extends React.Component {
   render () {
     const { editMode } = this.props
     return (
-      <section className='flex flex-1 flex-col items-end bg-neutral-300 items-end justify-center'>
+      <section className='flex flex-1 flex-col bg-neutral-300 items-end justify-center'>
         <div
           className='mr-12 self-end flex flex-col gap-2'
         >

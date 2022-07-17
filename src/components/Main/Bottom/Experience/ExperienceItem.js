@@ -52,7 +52,7 @@ class ExperienceItem extends React.Component {
             : <p className='text-nowrap p-1 text-right min-w-[160px]'>{this.state.dates}</p>}
         </div>
         <div className='h-0.5 w-16 min-w-[4rem] bg-neutral-300' />
-        <div>
+        <div className='flex'>
           {editMode
             ? <textarea
                 className='resize-none p-2 h-14 w-56'

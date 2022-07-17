@@ -51,12 +51,18 @@ class Experience extends React.Component {
       )
     })
     return (
-      <div>
+      <div className='flex flex-col'>
         <h3 className='text-xl mt-4'>Experience</h3>
         {experienceItemElements}
         {editMode &&
         this.state.experienceItemsCount < 3 &&
-          <button type='button' onClick={this.handleAddExperienceItem}>+</button>}
+          <button
+            className='mx-auto w-full text-3xl'
+            type='button'
+            onClick={this.handleAddExperienceItem}
+          >
+            +
+          </button>}
       </div>
     )
   }
