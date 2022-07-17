@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cv-application/static/css/main.9e9db2fa.css",
+    "main.js": "/cv-application/static/js/main.61fd877a.js",
+    "static/media/elmer.png": "/cv-application/static/media/elmer.e220e3de3dbc789e97e3.png",
+    "index.html": "/cv-application/index.html",
+    "main.9e9db2fa.css.map": "/cv-application/static/css/main.9e9db2fa.css.map",
+    "main.61fd877a.js.map": "/cv-application/static/js/main.61fd877a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e9db2fa.css",
+    "static/js/main.61fd877a.js"
+  ]
+}
