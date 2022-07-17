@@ -20,11 +20,6 @@ class EducationItem extends React.Component {
     this.setState({ [name]: value })
   }
 
-  componentDidUpdate () {
-    console.log(this.props)
-    console.log(this.state)
-  }
-
   render () {
     const { editMode, onDeleteEducationItem, id } = this.props
 

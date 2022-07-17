@@ -34,10 +34,6 @@ class Experience extends React.Component {
     })
   }
 
-  componentDidUpdate () {
-    console.log(this.state.experienceItems)
-  }
-
   render () {
     const { editMode } = this.props
     const experienceItemElements = this.state.experienceItems.map((id) => {
