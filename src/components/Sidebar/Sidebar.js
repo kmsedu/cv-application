@@ -4,19 +4,17 @@ import ContactInfo from './ContactInfo'
 import Address from './Address'
 
 class Sidebar extends React.Component {
-  constructor (props) {
-    super(props)
-  }
-
   render () {
+    const { editMode } = this.props
+
     return (
-      <section className='sidebar flex flex-col flex-1 p-3 items-center justify-between'>
-        <Picture />
-        <h2 className='text-xl'>Contact</h2>
+      <section className='sidebar flex flex-col flex-none justify-between'>
+        <Picture editMode={editMode} />
+        <h2 className='text-xl text-center'>Contact</h2>
         <section className='flex-1 justify-self-start'>
-          <ContactInfo />
-          <ContactInfo />
-          <ContactInfo />
+          <ContactInfo contactType='phone' editMode={editMode} />
+          <ContactInfo contactType='email' editMode={editMode} />
+          <ContactInfo contactType='website' editMode={editMode} />
         </section>
         <Address />
       </section>
